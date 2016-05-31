@@ -1,0 +1,49 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">University Church of Christ </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Member Directory<span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Announcements</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">House-to-House Groups<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Group 1</a></li>
+            <li><a href="#">Group 2</a></li>
+            <li><a href="#">Group 3</a></li>
+            <li><a href="#">Group 4</a></li>
+            <li><a href="#">Group 5</a></li>
+            <li><a href="#">Group 6</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Bible Study Curriculum</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Additional Resources</a></li>
+          </ul>
+        </li>
+      </ul>
+    
+      <ul class="nav navbar-nav navbar-right">
+         <li><a href="#">Link</a></li>
+        <% if current_member %>
+          <li><%= link_to 'Sign Out', destroy_member_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to "Sign Up", new_member_registration_path %></li>
+          <li><%= link_to "Login", new_member_session_path %></li>
+        <% end %> 
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->  
+</nav>
